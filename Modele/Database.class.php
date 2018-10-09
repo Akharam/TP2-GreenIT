@@ -153,13 +153,14 @@
         	/**
 		 * Fonction qui recupere tous les pays
 		 */
-		function getEtudiants($grp)
+		function getEtudiants($nom,prenom,$grp)
 		{
-			$sql = "select nom,prenom from etudiants where groupe = ". $grp; //La requete qui recupere les pays
+			$sql = "select nom,prenom from etudiants where nom = ".$nom." and prenom = ".$prenom";"  //La requete qui recupere les pays
 
 			$res = $this->executerRequeteAvecResultat($sql); //On recupere le resultat de la requete en l'executant
 			
 			return $res;
 		}
+        function fillHistorique
     }
 ?>
